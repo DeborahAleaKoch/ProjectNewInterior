@@ -1,0 +1,51 @@
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+  }
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+}
+
+@mixin btn {
+  height: 3vh;
+  background-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6vh;
+  line-height: 150%;
+  text-align: center;
+  height: 5vh;
+  width: 11vh;
+  border: 1px solid $grayBtn;
+  transition: 0.5s ease-in-out;
+  &:hover {
+    background-color: $grayBtn;
+    color: white;
+  }
+}
+
+
+@mixin lightGraySection {
+  background-color: $lightGray;
+  color: $white;
+  //   margin: $generalMargin;
+  text-align: center;
+}
+
+@mixin parallax($url) {
+  background-image: $url;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

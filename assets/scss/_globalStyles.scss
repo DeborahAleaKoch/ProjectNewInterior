@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "ASSC-Reg";
+  src: url("../fonts/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf");
+}
+
+@font-face {
+  font-family: "NixieOne";
+  src: url("../fonts/Nixie_One/NixieOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "AS-Medium";
+  src: url("../fonts/Alegreya_Sans/AlegreyaSans-Medium.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-family: "NixieOne";
+  font-size: 5vh;
+  font-weight: 400;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3.7vh;
+  font-family: "ASSC-Reg";
+  font-weight: 500;
+  margin-bottom: 1vh;
+}
+
+.burg-menu div {
+  color: $white;
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: 2px solid $white;
+}
+
+h3 {
+  font-size: 3vh;
+  font-family: "AS-Medium";
+  margin-bottom: 1vh;
+}

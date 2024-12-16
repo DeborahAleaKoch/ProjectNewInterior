@@ -1,0 +1,84 @@
+@import "variables";
+@import "mixins";
+@import "globalStyles";
+
+header {
+  height: 100vh;
+  position: relative;
+
+  nav {
+    padding: 2vh;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    color: $white;
+    width: 100%;
+    @include flexBetween;
+  }
+
+  article {
+    position: absolute;
+    top: 45vh;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    @include flexColumn;
+
+    p {
+      font-family: "ASSC-Reg";
+      color: gba(255, 255, 255, 0.5);
+      font-size: 2vh;
+    }
+  }
+}
+
+main {
+  .hero {
+    margin: $generalMargin;
+    @include flexBetween;
+    button {
+      @include btn;
+    }
+  }
+  div {
+    // padding-bottom: 3.5vh;
+  }
+
+  .gallery {
+    margin: $generalMargin;
+
+    // padding-bottom: 3.5vh;
+    @include flexBetween;
+    overflow: hidden;
+    flex-wrap: wrap;
+
+    div {
+      width: 32%;
+      height: 30vh;
+      margin-bottom: 2.5vh;
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
+      transition: 0.2s;
+    }
+    img:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.our-services {
+  padding: 30px;
+  @include parallax(url("../img/yellowSeat.png"));
+
+  @include lightGraySection;
+
+  article {
+    width: 100%;
+    @include flexBetween;
+    div {
+      @include flexColumn;
+    }
+  }
+}
