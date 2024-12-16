@@ -31,7 +31,7 @@ h2 {
   font-size: 3.7vh;
   font-family: "ASSC-Reg";
   font-weight: 500;
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
 }
 
 .burg-menu div {
@@ -47,7 +47,14 @@ h2 {
 h3 {
   font-size: 3vh;
   font-family: "AS-Medium";
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8vh;
+  font-weight: 400;
+  line-height: 142%;
 }
 
 header {
@@ -128,47 +135,57 @@ main .gallery {
     flex-direction: column;
   }
 }
-main .gallery div {
+main .gallery .hover-pic-btn {
   width: 32%;
   height: 30vh;
   margin-bottom: 2.5vh;
   overflow: hidden;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .gallery img {
   width: 100%;
-  transition: 0.2s;
+  transition: 0.2s ease;
+  backface-visibility: hidden;
 }
 main .gallery img:hover {
   transform: scale(1.2);
 }
-
-.our-services {
-  padding: 30px;
+main .our-services {
+  padding: 3vh 7vw;
   background-image: url("../img/yellowSeat.png");
   height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+main .our-services .gray-section {
   background-color: rgba(0, 0, 0, 0.2);
   color: #ffffff;
   text-align: center;
+  padding: 3vh 5vw;
 }
-.our-services article {
+main .our-services div {
+  margin-bottom: 5vh;
+}
+main .our-services article {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media screen and (max-width: 992px) {
-  .our-services article {
+  main .our-services article {
     flex-direction: column;
   }
 }
-.our-services article div {
+main .our-services article div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #ffffff;
+  width: 25%;
 }/*# sourceMappingURL=style.css.map */

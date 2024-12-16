@@ -52,33 +52,45 @@ main {
     overflow: hidden;
     flex-wrap: wrap;
 
-    div {
+    .hover-pic-btn {
       width: 32%;
       height: 30vh;
       margin-bottom: 2.5vh;
       overflow: hidden;
+      position: relative;
+      object-fit: cover;
     }
     img {
       width: 100%;
-      transition: 0.2s;
+      transition: 0.2s ease;
+      backface-visibility: hidden;
+
+      //   background-color:#C3C9CC;
     }
     img:hover {
       transform: scale(1.2);
     }
   }
-}
 
-.our-services {
-  padding: 30px;
-  @include parallax(url("../img/yellowSeat.png"));
+  .our-services {
+    padding: $generalMargin;
 
-  @include lightGraySection;
+    @include parallax(url("../img/yellowSeat.png"));
 
-  article {
-    width: 100%;
-    @include flexBetween;
+    .gray-section {
+      @include lightGraySection;
+      padding: 3vh 5vw;
+    }
     div {
-      @include flexColumn;
+      margin-bottom: 5vh;
+    }
+    article {
+      width: 100%;
+      @include flexBetween;
+      div {
+        @include flexColumn;
+        width: 25%;
+      }
     }
   }
 }
